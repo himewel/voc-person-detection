@@ -10,11 +10,11 @@ All the images of validation and training of both datasets (2007 and 2012) were 
 ## How to use this repo in Google Colab
 
 * Clone this repo and run `config.bash`:
- - It will clone Darknet repo and compile then with GPU flags;
- - It will also request your permission to give access to Google Drive and use it as a backup of the logs, weights and charts;
- - The datasets are downloaded from Pascal VOC site, so it can take a few minutes;
- - Next, the images are threated as described previously;
- - The weights from yolov3-tiny in Darknet repo are used
+  - It will clone Darknet repo and compile then with GPU flags;
+  - It will also request your permission to give access to Google Drive and use it as a backup of the logs, weights and charts;
+  - The datasets are downloaded from Pascal VOC site, so it can take a few minutes;
+  - Next, the images are threated as described previously;
+  - The weights from yolov3-tiny in Darknet repo are used
 
 ```bash
 !git clone https://github.com/himewel/voc-person-detection
@@ -22,8 +22,8 @@ All the images of validation and training of both datasets (2007 and 2012) were 
 ```
 
 * Run `train.bash` with the target model as command line parameter: yolov3-tiny or yolov3-tiny_xnor:
- - It will start the training and save the print outputs as a log;
- - At the end of the training, the chart is also saved;
+  - It will start the training and save the print outputs as a log;
+  - At the end of the training, the chart is also saved;
 
 ```bash
 !bash train.bash yolov3-tiny
