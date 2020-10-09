@@ -46,15 +46,12 @@ label_setup() {
     echo -e "\nSetting up label files..."
     cd /content/darknet/VOC_data_from_2007_to_2012/
     python /content/voc-person-detection/label_setup.py
+}
+
+download_weights() {
     cd /content/darknet
-
-    echo -e "\nUpdating class names..."
-    echo "person" > data/voc.names
-    head -6 data/voc.names
-
-    echo -e "\nUpdating class number..."
-    sed -i 's|classes= 20|classes = 1|' cfg/voc.data
-    head -6 cfg/voc.data
+    wget -c https://pjreddie.com/media/files/yolov3-tiny.weights
+    ./darknet partial cfg/yolov3-tiny.cfg yolov3-tiny.weights yolov3-tiny.conv.15 15
 }
 
 original_location=$(pwd)
@@ -62,4 +59,5 @@ cd /content
 clone_and_compile
 download_dataset
 label_setup
+download_weights
 cd ${original_location}
