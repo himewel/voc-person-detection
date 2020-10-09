@@ -11,5 +11,6 @@ weights=${1}.conv.15
 
 original_location=$(pwd)
 cd /content/darknet
-./darknet detector train $data $cfg $weights -dont_show -map -mjpeg_port 8090
+./darknet detector train $data $cfg $weights -dont_show -map -mjpeg_port 8090 > /content/darknet/backup/${1}.log
+cp /content/darknet/chart.png /content/darknet/backup
 cd ${original_location}
