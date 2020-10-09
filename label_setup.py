@@ -27,7 +27,7 @@ def convert(size, box):
 
 
 def convert_annotation(year, image_id):
-    in_file = open(f'VOCdevkit/VOC{year}/Annotations/%{image_id}.xml')
+    in_file = open(f'VOCdevkit/VOC{year}/Annotations/{image_id}.xml')
     out_file = open(f'VOCdevkit/VOC{year}/labels/{image_id}.txt', 'w')
     tree = ET.parse(in_file)
     root = tree.getroot()
