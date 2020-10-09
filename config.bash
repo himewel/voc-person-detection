@@ -45,7 +45,7 @@ download_dataset() {
 label_setup() {
     echo -e "\nSetting up label files..."
     cd /content/darknet/VOC_data_from_2007_to_2012/
-    python label_setup.py
+    python /content/voc-person-detection/label_setup.py
     cd /content/darknet
 
     echo -e "\nUpdating class names..."
@@ -53,7 +53,7 @@ label_setup() {
     head -6 data/voc.names
 
     echo -e "\nUpdating class number..."
-    sed -i 's|classes= 20|classes = 1' cfg/voc.data
+    sed -i 's|classes= 20|classes = 1|' cfg/voc.data
     head -6 cfg/voc.data
 }
 
