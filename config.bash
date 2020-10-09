@@ -18,12 +18,6 @@ clone_and_compile() {
 }
 
 download_dataset() {
-    echo -e "\nReplacing dataset variables..."
-    sed -i 's|train  = /home/pjreddie/data/voc/train.txt|train = VOC_data_from_2007_to_2012/train.txt|' cfg/voc.data
-    sed -i 's|valid  = /home/pjreddie/data/voc/2007_test.txt|valid = VOC_data_from_2007_to_2012/2007_test.txt|' cfg/voc.data
-    sed -i 's|backup = /home/pjreddie/backup/|backup = backup|' cfg/voc.data
-    head -6 cfg/voc.data
-
     echo -e "\nCreating dataset folder..."
     mkdir VOC_data_from_2007_to_2012
     cd VOC_data_from_2007_to_2012
