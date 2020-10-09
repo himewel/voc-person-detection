@@ -57,7 +57,9 @@ label_setup() {
     head -6 cfg/voc.data
 }
 
-
+original_location=$(pwd)
+cd /content
 clone_and_compile
 download_dataset
 label_setup
+cd ${original_location}

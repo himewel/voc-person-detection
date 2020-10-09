@@ -22,5 +22,8 @@ download_weights() {
     ./darknet partial cfg/yolov3-tiny.cfg yolov3-tiny.weights yolov3-tiny.conv.15 15
 }
 
+original_location=$(pwd)
+cd /content/darknet
 model_config
 download_weights
+cd ${original_location}

@@ -5,6 +5,9 @@ if [ "${1}" = "" ]; then
     exit
 fi
 
+original_location=$(pwd)
+cd /content/darknet
 pip install pyngrok
 python -c "from pyngrok import ngrok; print(ngrok.connect(port = '8090'))"
 ./darknet detector train cfg/voc.data cfg/${1}.cfg ${1}.conv.15 -dont_show -map -mjpeg_port 8090
+cd ${original_location}
