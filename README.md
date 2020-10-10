@@ -1,4 +1,4 @@
-# YOLO training to object detection of person class
+# Training YOLO to object detection of people
 
 This repo wraps some scripts to train YOLOv3-Tiny and YOLOv3-Tiny + XNOR-Net with **Darknet** (https://github.com/AlexeyAB/darknet) by the use of a mixing of Pascal VOC 2007 and 2012 datasets. To make predictions only with person objects, just images with the *person* class label are taken from the datasets. The Pascal VOC datasets are divided in three subsets of images: training, validation and test.
 
@@ -30,7 +30,7 @@ All the images of validation and training of both datasets (2007 and 2012) were 
 !bash train.bash yolov3-tiny_xnor
 ```
 
-* If you want to wantch the chart updating in live, you can start a ngrok server before run the trainment:
+* If you want to watch the loss and mAP chart updating in live, you can start a ngrok server before run the trainment script:
 
 ```bash
 !wget -c https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
