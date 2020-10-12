@@ -1,4 +1,4 @@
-# Training YOLO to object detection of people
+# Training YOLO to person detection with VOC Pascal
 
 This repo wraps some scripts to train YOLOv3-Tiny and YOLOv3-Tiny + XNOR-Net with **Darknet** (https://github.com/AlexeyAB/darknet) by the use of a mixing of Pascal VOC 2007 and 2012 datasets. To make predictions only with person objects, just images with the *person* class label are taken from the datasets. The Pascal VOC datasets are divided in three subsets of images: training, validation and test.
 
@@ -9,7 +9,7 @@ All the images of validation and training of both datasets (2007 and 2012) were 
 
 ## How to use this repo in Google Colab
 
-* Clone this repo and run `config.bash`:
+* Clone this repo and run `config`:
   - It will clone Darknet repo and compile then with GPU flags;
   - It will also request your permission to give access to Google Drive and use it as a backup of the logs, weights and charts;
   - The datasets are downloaded from Pascal VOC site, so it can take a few minutes;
@@ -18,10 +18,10 @@ All the images of validation and training of both datasets (2007 and 2012) were 
 
 ```bash
 !git clone https://github.com/himewel/voc-person-detection
-!bash config.bash
+!./config
 ```
 
-* Run `train.bash` with the target model as command line parameter: yolov3-tiny or yolov3-tiny_xnor:
+* Run `train` with the target model as command line parameter: yolov3-tiny or yolov3-tiny_xnor:
   - It will start the training and save the print outputs as a log;
   - At the end of the training, the chart is also saved;
 
