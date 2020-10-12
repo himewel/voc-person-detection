@@ -5,8 +5,8 @@ if [ "${1}" = "" ]; then
     exit
 fi
 
-data=/content/voc-person-detection/voc.data
-cfg=/content/voc-person-detection/${1}.cfg
+data=/content/voc-person-detection/cfg/voc.data
+cfg=/content/voc-person-detection/cfg/${1}.cfg
 
 if [ "${2}" = "" ]; then
     weights=/content/darknet/yolov3-tiny.conv.15

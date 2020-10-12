@@ -2,5 +2,5 @@ classes = 1
 train = /content/darknet/VOC_data_from_2007_to_2012/train.txt
 valid = /content/darknet/VOC_data_from_2007_to_2012/2007_test.txt
 backup = backup
-names = /content/voc-person-detection/voc.names
-eval=coco
+names = /content/voc-person-detection/cfg/voc.names
+eval=voc
