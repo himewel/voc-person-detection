@@ -2,6 +2,8 @@
 
 This repo wraps some scripts to train YOLOv3-Tiny and YOLOv3-Tiny + XNOR-Net with **Darknet** (https://github.com/AlexeyAB/darknet) by the use of a mixing of Pascal VOC 2007 and 2012 datasets. To make predictions only with person objects, just images with the *person* class label are taken from the datasets. The Pascal VOC datasets are divided in three subsets of images: training, validation and test.
 
+![Endgame teaser trailer](charts/endgame.gif)
+
 All the images of validation and training of both datasets (2007 and 2012) were used to compose the training dataset of the CNNs in this repo. About the test subsets, the images from 2012 test subset were used with the training dataset. The images from 2007 test subset are used as the validation dataset. The following charts of training error and mAP metrics was achieved with the train in Google Colab:
 
 ## Loss and mAP evaluation
